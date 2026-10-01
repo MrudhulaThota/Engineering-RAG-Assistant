@@ -1,0 +1,598 @@
+/* =========================================================
+   UPLOAD PAGE
+========================================================= */
+
+.upload-page {
+    min-height: 100vh;
+
+    background: #f5f7fb;
+
+    color: #172554;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   PAGE CONTAINER
+========================================================= */
+
+.upload-container {
+    display: flex;
+
+    min-height: calc(100vh - 78px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.upload-main {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 38px;
+
+    background: #f5f7fb;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.upload-header {
+    max-width: 1000px;
+
+    margin: 0 auto 28px;
+}
+
+
+.upload-tag {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    margin-bottom: 10px;
+
+    background: #e0edff;
+
+    border-radius: 20px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+}
+
+
+.upload-header h1 {
+    margin: 0 0 10px;
+
+    color: #14255a;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+
+.upload-header p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   UPLOAD CARD
+========================================================= */
+
+.upload-card {
+    max-width: 850px;
+
+    min-height: 390px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 2px dashed #cbdaf3;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.upload-card.drag-active {
+    background: #f3f7ff;
+
+    border-color: #2563eb;
+
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   UPLOAD ICON
+========================================================= */
+
+.upload-icon {
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    background: #eaf2ff;
+
+    border-radius: 22px;
+
+    font-size: 35px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.upload-card h2 {
+    margin: 0 0 10px;
+
+    color: #172554;
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.upload-description {
+    max-width: 500px;
+
+    margin: 0 0 22px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CHOOSE PDF
+========================================================= */
+
+.choose-file {
+    min-width: 145px;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border: 1px solid #cbdcff;
+
+    border-radius: 9px;
+
+    background: #eef4ff;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+
+.choose-file:hover {
+    background: #e2ecff;
+
+    border-color: #2563eb;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SUPPORT TEXT
+========================================================= */
+
+.file-support {
+    margin: 12px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.selected-file {
+    width: min(100%, 520px);
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 9px 13px;
+
+    background: #f7f9fc;
+
+    border: 1px solid #e3e9f2;
+
+    border-radius: 11px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+
+.selected-file-icon {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eaf2ff;
+
+    border-radius: 9px;
+
+    font-size: 19px;
+}
+
+
+.selected-file-info {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.selected-file-info strong {
+    overflow: hidden;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.selected-file-info span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+.remove-file {
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.remove-file:hover {
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   UPLOAD BUTTON
+========================================================= */
+
+.upload-button {
+    min-width: 190px;
+
+    height: 46px;
+
+    margin-top: 21px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.18);
+
+    transition: 0.2s ease;
+}
+
+
+.upload-button:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 11px 22px rgba(37, 99, 235, 0.24);
+}
+
+
+.upload-button:disabled {
+    background: #cbd5e1;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.upload-message {
+    margin-top: 15px;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   INFO CARDS
+========================================================= */
+
+.upload-info {
+    max-width: 850px;
+
+    margin: 22px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+.info-card {
+    min-height: 100px;
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eaf1;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 23, 42, 0.03);
+
+    box-sizing: border-box;
+}
+
+
+.info-card-icon {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+
+.info-card-icon.blue {
+    background: #eaf2ff;
+}
+
+
+.info-card-icon.purple {
+    background: #f1eaff;
+}
+
+
+.info-card-icon.green {
+    background: #e6faf2;
+}
+
+
+.info-card h3 {
+    margin: 0 0 5px;
+
+    color: #172554;
+
+    font-size: 13px;
+}
+
+
+.info-card p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-button {
+    display: block;
+
+    margin: 22px auto 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .upload-main {
+        padding: 28px;
+    }
+
+    .upload-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .upload-main {
+        padding: 20px;
+    }
+
+    .upload-header h1 {
+        font-size: 27px;
+    }
+
+    .upload-card {
+        min-height: 350px;
+
+        padding: 28px 18px;
+    }
+}

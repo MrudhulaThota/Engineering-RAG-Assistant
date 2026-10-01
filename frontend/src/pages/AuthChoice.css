@@ -1,0 +1,688 @@
+/* =========================================================
+   ENGINEERING RAG ASSISTANT
+   PROFESSIONAL AUTH / WELCOME PAGE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: #172554;
+}
+
+
+/* =========================================================
+   WELCOME PAGE BACKGROUND
+   ========================================================= */
+
+.auth-container {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(99, 102, 241, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f7f9ff 0%,
+            #eef3fb 100%
+        );
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.auth-card {
+    width: 620px;
+    max-width: 100%;
+
+    padding: 52px 60px 38px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(30, 64, 175, 0.12),
+        0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #edf4ff,
+        #e4edff
+    );
+
+    border: 1px solid #dbe7ff;
+
+    border-radius: 22px;
+
+    font-size: 36px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.auth-card h1 {
+    margin: 0;
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.8px;
+
+    font-weight: 750;
+
+    color: #13245a;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.subtitle {
+    max-width: 470px;
+
+    margin: 15px auto 34px;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    margin: 0 auto 34px;
+
+    max-width: 500px;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.features div {
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 14px 16px;
+
+    background: #f8faff;
+
+    border: 1px solid #e3eaf5;
+
+    border-radius: 13px;
+
+    color: #243b69;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.features div:hover {
+    background: #f3f7ff;
+
+    border-color: #cddcff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.07);
+}
+
+
+/* =========================================================
+   AUTH BUTTON AREA
+   ========================================================= */
+
+.auth-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   AUTH BUTTONS
+   ========================================================= */
+
+.auth-buttons button {
+    width: 185px;
+    height: 52px;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+.auth-buttons .login-btn {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #315ee8
+    );
+
+    border: 1px solid #2563eb;
+
+    box-shadow:
+        0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.auth-buttons .login-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #294fcf
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 26px rgba(37, 99, 235, 0.28);
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT
+   ========================================================= */
+
+.auth-buttons .register-btn {
+    color: #2563eb;
+
+    background: #ffffff;
+
+    border: 1px solid #c9d8fa;
+
+    box-shadow:
+        0 5px 14px rgba(15, 23, 42, 0.04);
+}
+
+.auth-buttons .register-btn:hover {
+    background: #f4f7ff;
+
+    border-color: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.offline-text {
+    margin: 32px 0 0;
+
+    padding-top: 21px;
+
+    border-top: 1px solid #e8edf5;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER PAGE
+   ========================================================= */
+
+.register-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f7f9ff,
+            #eef3fb
+        );
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER CARD
+   ========================================================= */
+
+.register-card {
+    width: 430px;
+    max-width: 100%;
+
+    padding: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3eaf5;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.11);
+}
+
+
+/* =========================================================
+   FORM LOGO
+   ========================================================= */
+
+.register-logo {
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf1ff;
+
+    border: 1px solid #dce7ff;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   FORM TITLE
+   ========================================================= */
+
+.register-card h1 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM SUBTITLE
+   ========================================================= */
+
+.register-subtitle {
+    margin: 10px 0 28px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group,
+.register-group {
+    width: 100%;
+
+    margin-bottom: 17px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.input-group label,
+.register-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-group input,
+.register-group input {
+    width: 100%;
+    height: 47px;
+
+    padding: 0 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #d8e0eb;
+
+    border-radius: 9px;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.input-group input:focus,
+.register-group input:focus {
+    background: #ffffff;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.input-group input::placeholder,
+.register-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   FORM BUTTON
+   ========================================================= */
+
+.full-btn,
+.register-submit {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.full-btn:hover,
+.register-submit:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 11px 22px rgba(37, 99, 235, 0.24);
+}
+
+.full-btn:disabled,
+.register-submit:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SWITCH AUTH
+   ========================================================= */
+
+.switch-auth,
+.register-switch {
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.switch-auth span,
+.register-switch span {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.switch-auth span:hover,
+.register-switch span:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-btn,
+.register-back {
+    margin-top: 8px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.back-btn:hover,
+.register-back:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   SECURITY TEXT
+   ========================================================= */
+
+.register-security {
+    margin-top: 20px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-card {
+        padding: 38px 25px;
+    }
+
+    .auth-card h1 {
+        font-size: 29px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+    }
+
+    .auth-buttons button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .register-page {
+        padding: 20px;
+    }
+
+    .register-card {
+        padding: 32px 24px;
+    }
+
+    .register-card h1 {
+        font-size: 25px;
+    }
+}
